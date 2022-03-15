@@ -4,7 +4,7 @@ pipeline {
         stage('Build') { 
             steps {
                 echo 'Build App' 
-                git 'https://github.com/SakshiChajed/gitjenkins.git'
+                bat '''java -version'''
             }
         }
         stage('Test') { 
