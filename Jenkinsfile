@@ -6,7 +6,7 @@ pipeline {
                 bat '''
                 date
                 java -version
-                python -version
+                python -h
                 git status
                 '''
             }
