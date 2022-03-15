@@ -17,4 +17,11 @@ pipeline {
             }
         }
     }
+    
+     post {
+       always 
+         {
+            emailext body: 'Summary', subject: 'Pipeline Status', to: 'sakshichhajed30@gmail.com'
+        }
+    }
 }
