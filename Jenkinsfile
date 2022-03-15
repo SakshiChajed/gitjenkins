@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Env Checkout') { 
             steps { 
-                bat '''
+                sh '''
                 date
                 java -version
                 python -version
