@@ -4,7 +4,10 @@ pipeline {
         stage('Build') { 
             steps {
                 echo 'Build App' 
-                bat '''java -version'''
+                bat '''
+                date
+                java -version
+                '''
             }
         }
         stage('Test') { 
