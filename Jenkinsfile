@@ -3,11 +3,11 @@ pipeline {
     stages {
         stage('Env Checkout') { 
             steps { 
-                sh '''
+                bat '''
                 date
                 java -version
                 python -version
-                bat 'git status'
+                git status
                 '''
             }
         }
