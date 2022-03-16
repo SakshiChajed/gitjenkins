@@ -17,7 +17,7 @@ pipeline {
                 bat '''
                 dir
                 git branch -a
-                git checkout branchname
+                git checkout master
                 '''
                }
             }
