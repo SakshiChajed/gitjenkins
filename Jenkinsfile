@@ -26,8 +26,8 @@ pipeline {
             steps {
                 bat '''
                 git status
-                git add.
-                git commint -m "Commit the modified file"
+                git add .
+                git commit -m "Commit the modified file"
                 git push origin master
                 '''
             }
