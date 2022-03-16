@@ -12,8 +12,15 @@ pipeline {
         }
         stage('Git') { 
             steps {
-                git credentialsId: '57112c64-5128-4068-a52f-15128af17778', url: 'https://github.com/SakshiChajed/gitjenkins.git' 
+                script{
+                git credentialsId: '57112c64-5128-4068-a52f-15128af17778', url: 'https://github.com/SakshiChajed/gitjenkins.git'
+                bat '''
+                dir
+                git branch -a
+                git checkout branchname
+                '''
                }
+            }
         }
         stage('Build') { 
             steps {
