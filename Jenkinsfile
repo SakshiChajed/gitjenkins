@@ -25,6 +25,7 @@ pipeline {
         stage('Modify') { 
             steps {
                 bat '''
+                notepad file3.py
                 type file3.py
                 '''
             }
