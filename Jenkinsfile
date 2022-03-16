@@ -26,8 +26,7 @@ pipeline {
                 echo 'Deploy App' 
                 bat '''
                 git add *
-                git commit -m "Trying"
-                git push origin master 
+                git commit -m "Trying" 
                 '''
                 
             }
