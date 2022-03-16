@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Env Checkout') { 
             steps { 
-                sh '''
+                bat '''
                 date
                 java -version
                 git status
@@ -14,8 +14,8 @@ pipeline {
             steps {
                 script{
                 git credentialsId: '57112c64-5128-4068-a52f-15128af17778', url: 'https://github.com/SakshiChajed/gitjenkins.git'
-                sh '''
-                ls -la
+                bat '''
+                dir
                 git branch -a
                 git checkout master
                 '''
@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Push File to Git') { 
             steps {
-                sh '''
+                bat '''
                 git status
                 git add .
                 git commit -m "Commit the modified file"
