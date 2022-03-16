@@ -10,6 +10,11 @@ pipeline {
                 '''
             }
         }
+        stage('Git') { 
+            steps {
+                git credentialsId: '57112c64-5128-4068-a52f-15128af17778', url: 'https://github.com/SakshiChajed/gitjenkins.git' 
+               }
+        }
         stage('Build') { 
             steps {
                 echo 'Build App'
@@ -24,10 +29,9 @@ pipeline {
         stage('Deploy') { 
             steps {
                 echo 'Deploy App' 
-               
-                
-            }
+               }
         }
+        
     }
     
      post {
