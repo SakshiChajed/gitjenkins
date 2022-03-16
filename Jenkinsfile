@@ -6,7 +6,6 @@ pipeline {
                 bat '''
                 date
                 java -version
-                python -h
                 git status
                 '''
             }
@@ -28,7 +27,7 @@ pipeline {
                 bat '''
                 git add *
                 git commit -m "Trying"
-                git push 
+                git push origin master 
                 '''
                 
             }
