@@ -22,6 +22,13 @@ pipeline {
                }
             }
         }
+        stage('Modify') { 
+            steps {
+                bat '''
+                type file3.py
+                '''
+            }
+        }
         stage('Push File to Git') { 
             steps {
                 bat '''
