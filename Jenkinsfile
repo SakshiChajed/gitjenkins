@@ -22,6 +22,16 @@ pipeline {
                }
             }
         }
+        stage('Push File to Git') { 
+            steps {
+                bat '''
+                git status
+                git add.
+                git commint -m "Commit the modified file"
+                git push origin master
+                '''
+            }
+        }
         stage('Build') { 
             steps {
                 echo 'Build App'
