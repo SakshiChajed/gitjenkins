@@ -24,10 +24,7 @@ pipeline {
         stage('Deploy') { 
             steps {
                 echo 'Deploy App' 
-                bat '''
-                git add *
-                git commit -m "Trying" 
-                '''
+               
                 
             }
         }
